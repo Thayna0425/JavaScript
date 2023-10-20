@@ -156,6 +156,7 @@ function validaEmail(elemento){
 let camposObrigatorios = document.querySelectorAll('input.obrigatorio');
 let camposNumericos = document.querySelectorAll('input.numero');
 let camposEmail = document.querySelectorAll('input.email');
+let camposUf = document.querySelectorAll('input.uf');
 
 for( let emFoco of camposObrigatorios) {
     validaCampo(emFoco);
@@ -168,4 +169,9 @@ for( let emFoco of camposNumericos) {
 for( let emFoco of camposEmail) {
     validaEmail(emFoco);
 }
+
+}
+
+for( let emFoco of camposUf) {
+    validaUF(emFoco);
 
