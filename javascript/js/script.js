@@ -104,7 +104,7 @@ function validaCampoNumerico(elemento){
 
         event.preventDefault();
 
-        let numero = this.value.match(/^[\d]5-[\d]3/) ? this.value.replace(/-/, "") : this.value; 
+        let numero = this.value.match(/^[\d]5-[\d]3/)? this.value (/-/,"") : this.value
 
         if(numero != "" && numero.match(/[0-9]*/) && numero >= 0 && numero <= 10){
             document.querySelector('.mensagem').innerHTML = "";
@@ -118,6 +118,14 @@ function validaCampoNumerico(elemento){
         }
 
     });
+
+    function validaUF(uf){
+             var ufsValidas = ["AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO"];
+         
+         return ufsValidas.includes(uf.toUpperCase());
+       }
+       
+});
 
 }
 
